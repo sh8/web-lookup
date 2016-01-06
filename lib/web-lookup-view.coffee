@@ -1,15 +1,21 @@
-module.exports =
-class WebLookupView
-  constructor: (serializedState) ->
-    # Create root element
-    @element = document.createElement('div')
-    @element.classList.add('web-lookup')
+{ScrollView} = require 'atom-space-pen-views'
 
-    # Create message element
-    message = document.createElement('div')
-    message.textContent = "The WebLookup package is Alive! It's ALIVE!"
-    message.classList.add('message')
-    @element.appendChild(message)
+module.exports =
+class WebLookupView extends ScrollView
+  @content: ->
+    @div =>
+      @h1 'SpeceCraft'
+      @ol =>
+        @li click: "displayText", 'test'
+        @li class: "message", outlet: "message"
+
+  displayText: ->
+    @message.text('super long content that will scroll')
+
+  constructor: (pathUrl) ->
+    super
+
+  getTitle: -> 'web-lookup'
 
   # Returns an object that can be retrieved when package is activated
   serialize: ->
