@@ -1,19 +1,25 @@
-{ScrollView} = require 'atom-space-pen-views'
+{TextEditorView, ScrollView} = require 'atom-space-pen-views'
 
 module.exports =
 class WebLookupView extends ScrollView
   @content: ->
     @div =>
-      @h1 'SpeceCraft'
-      @ol =>
-        @li click: "displayText", 'test'
-        @li class: "message", outlet: "message"
-
-  displayText: ->
-    @message.text('super long content that will scroll')
+      @subview 'addressBar', new TextEditorView(mini: true, placeholderText: 'Please enter a URL')
+      @tag 'a', '', class: 'button', =>
+        @tag 'img', class: 'icon', src: 'atom://web-lookup/public/images/back.png'
+      @tag 'a', '', class: 'button', =>
+        @tag 'img', class: 'icon', src: 'atom://web-lookup/public/images/reload.png'
+      @tag 'a', '', class: 'button', =>
+        @tag 'img', class: 'icon', src: 'atom://web-lookup/public/images/next.png'
+      @tag 'webview', id: 'webview', src: ""
 
   constructor: (pathUrl) ->
     super
+    @addressBar.setText(pathUrl)
+    @addressBar.addClass('urlholder')
+    if @webview is undefined
+      @webview = @element.querySelector('webview')
+    @webview.src = pathUrl
 
   getTitle: -> 'web-lookup'
 

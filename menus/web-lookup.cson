@@ -2,8 +2,8 @@
 'context-menu':
   'atom-text-editor': [
     {
-      'label': 'Toggle web-lookup'
-      'command': 'web-lookup:toggle'
+      'label': 'Open web-lookup'
+      'command': 'web-lookup:open'
     }
   ]
 'menu': [
@@ -13,8 +13,8 @@
       'label': 'web-lookup'
       'submenu': [
         {
-          'label': 'Toggle'
-          'command': 'web-lookup:toggle'
+          'label': 'Open'
+          'command': 'web-lookup:open'
         }
       ]
     ]

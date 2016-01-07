@@ -6,7 +6,7 @@
   "keywords": [
   ],
   "activationCommands": {
-    "atom-workspace": "web-lookup:toggle"
+    "atom-workspace": "web-lookup:open"
   },
   "repository": "https://github.com/atom/web-lookup",
   "license": "MIT",
