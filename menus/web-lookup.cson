@@ -5,6 +5,10 @@
       'label': 'Open web-lookup'
       'command': 'web-lookup:open'
     }
+    {
+      'label': 'Search'
+      'command': 'web-lookup:search'
+    }
   ]
 'menu': [
   {
@@ -15,6 +19,10 @@
         {
           'label': 'Open'
           'command': 'web-lookup:open'
+        }
+        {
+          'label': 'Search'
+          'command': 'web-lookup:search'
         }
       ]
     ]

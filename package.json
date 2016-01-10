@@ -6,7 +6,9 @@
   "keywords": [
   ],
   "activationCommands": {
-    "atom-workspace": "web-lookup:open"
+    "atom-workspace": "web-lookup:open",
+    "atom-workspace": "web-lookup:openFullScreen",
+    ".urlholder": "web-lookup:search"
   },
   "repository": "https://github.com/atom/web-lookup",
   "license": "MIT",
@@ -14,6 +16,7 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "atom-space-pen-views": "2.1.0"
+    "atom-space-pen-views": "2.1.0",
+    "url": "0.11.0"
   }
 }

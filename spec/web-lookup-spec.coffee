@@ -12,7 +12,7 @@ describe "WebLookup", ->
     workspaceElement = atom.views.getView(atom.workspace)
     activationPromise = atom.packages.activatePackage('web-lookup')
 
-  describe "when the web-lookup:toggle event is triggered", ->
+  describe "when the web-lookup:open event is triggered", ->
     it "hides and shows the modal panel", ->
       # Before the activation event the view is not on the DOM, and no panel
       # has been created
@@ -20,7 +20,7 @@ describe "WebLookup", ->
 
       # This is an activation event, triggering it will cause the package to be
       # activated.
-      atom.commands.dispatch workspaceElement, 'web-lookup:toggle'
+      atom.commands.dispatch workspaceElement, 'web-lookup:open'
 
       waitsForPromise ->
         activationPromise
@@ -33,7 +33,7 @@ describe "WebLookup", ->
 
         webLookupPanel = atom.workspace.panelForItem(webLookupElement)
         expect(webLookupPanel.isVisible()).toBe true
-        atom.commands.dispatch workspaceElement, 'web-lookup:toggle'
+        atom.commands.dispatch workspaceElement, 'web-lookup:open'
         expect(webLookupPanel.isVisible()).toBe false
 
     it "hides and shows the view", ->
@@ -49,7 +49,7 @@ describe "WebLookup", ->
 
       # This is an activation event, triggering it causes the package to be
       # activated.
-      atom.commands.dispatch workspaceElement, 'web-lookup:toggle'
+      atom.commands.dispatch workspaceElement, 'web-lookup:open'
 
       waitsForPromise ->
         activationPromise
@@ -58,5 +58,5 @@ describe "WebLookup", ->
         # Now we can test for view visibility
         webLookupElement = workspaceElement.querySelector('.web-lookup')
         expect(webLookupElement).toBeVisible()
-        atom.commands.dispatch workspaceElement, 'web-lookup:toggle'
+        atom.commands.dispatch workspaceElement, 'web-lookup:open'
         expect(webLookupElement).not.toBeVisible()

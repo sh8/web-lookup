@@ -9,3 +9,6 @@
 # https://atom.io/docs/latest/behind-atom-keymaps-in-depth
 'atom-workspace':
   'ctrl-o': 'web-lookup:open'
+  'ctrl-l': 'web-lookup:openFullScreen'
+'atom-workspace .urlholder':
+  'enter': 'web-lookup:search'
