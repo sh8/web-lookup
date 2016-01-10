@@ -12,9 +12,8 @@ module.exports = WebLookup =
     @subscriptions = new CompositeDisposable
     atom.tabs = []
 
-    item = atom.workspace.getActivePane()
     # Register command that toggles this view
-    @subscriptions.add atom.commands.add 'atom-workspace', 'web-lookup:open': => @openWebView('https://google.com')
+    @subscriptions.add atom.commands.add 'atom-workspace', 'web-lookup:openHalfScreen': => @openWebView('https://google.com')
     @subscriptions.add atom.commands.add 'atom-workspace', 'web-lookup:openFullScreen': => @openWebView('https://google.com', true)
     @subscriptions.add atom.commands.add '.urlholder', 'web-lookup:search': => @search()
 
