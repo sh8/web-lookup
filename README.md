@@ -2,7 +2,7 @@
 
 You can do research in atom editor.
 
-![GIF](https://raw.github.com/shun3475/web-lookup/master/screenshots/web-lookup-usage.gif)
+![GIF](https://raw.github.com/shun3475/web-lookup/master/screenshots/web-lookup-usage-screenshots.gif)
 
 ## Install
 
