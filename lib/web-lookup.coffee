@@ -1,5 +1,4 @@
 WebLookupView = require './web-lookup-view'
-{$} = require 'atom-space-pen-views'
 {CompositeDisposable} = require 'atom'
 
 module.exports = WebLookup =
