@@ -5,7 +5,7 @@
   "description": "A short description of your package",
   "keywords": [
   ],
-  "repository": "https://github.com/atom/web-lookup",
+  "repository": "https://github.com/shun3475/web-lookup/",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
