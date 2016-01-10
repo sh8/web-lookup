@@ -49,7 +49,7 @@ class WebLookupView extends ScrollView
     if pathUrl
       {host, path, pathname, query, hash} = url.parse(pathUrl, true)
       if host.match(/www\.google/)
-        q = query["q"] || hash?.match(/^#q=(.*)$/)?[1]
+        q = hash?.match(/^#q=(.*)$/)?[1] || query["q"]
         if q isnt undefined
           @addressBar.setText(q)
         else
