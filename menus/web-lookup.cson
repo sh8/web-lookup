@@ -2,12 +2,12 @@
 'context-menu':
   'atom-text-editor': [
     {
-      'label': 'Open web-lookup'
-      'command': 'web-lookup:open'
+      'label': 'Open Half Screen'
+      'command': 'web-lookup:openHalfScreen'
     }
     {
-      'label': 'Search'
-      'command': 'web-lookup:search'
+      'label': 'Open Full Screen'
+      'command': 'web-lookup:openFullScreen'
     }
   ]
 'menu': [
@@ -17,12 +17,12 @@
       'label': 'web-lookup'
       'submenu': [
         {
-          'label': 'Open'
-          'command': 'web-lookup:open'
+          'label': 'Open Half Screen'
+          'command': 'web-lookup:openHalfScreen'
         }
         {
-          'label': 'Search'
-          'command': 'web-lookup:search'
+          'label': 'Open Full Screen'
+          'command': 'web-lookup:openFullScreen'
         }
       ]
     ]
