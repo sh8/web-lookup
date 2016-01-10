@@ -5,11 +5,6 @@
   "description": "A short description of your package",
   "keywords": [
   ],
-  "activationCommands": {
-    "atom-workspace": "web-lookup:open",
-    "atom-workspace": "web-lookup:openFullScreen",
-    ".urlholder": "web-lookup:search"
-  },
   "repository": "https://github.com/atom/web-lookup",
   "license": "MIT",
   "engines": {
