@@ -1,9 +1,12 @@
 {
   "name": "web-lookup",
   "main": "./lib/web-lookup",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "You can do research in atom editor.",
-  "keywords": ["web", "browser"],
+  "keywords": [
+    "web",
+    "browser"
+  ],
   "repository": "https://github.com/shun3475/web-lookup",
   "license": "MIT",
   "engines": {
