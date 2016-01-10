@@ -1,4 +1,5 @@
 {$, TextEditorView, ScrollView} = require 'atom-space-pen-views'
+url = require 'url'
 
 module.exports =
 class WebLookupView extends ScrollView
@@ -23,7 +24,7 @@ class WebLookupView extends ScrollView
 
     @tabBar = $('.pane.active').find('.tab-bar')
 
-    @webview.addEventListener "did-finish-load", =>
+    @webview.addEventListener "page-title-set", =>
       @setTitle()
 
   addToolTips: ->
@@ -46,10 +47,9 @@ class WebLookupView extends ScrollView
   setTitle: ->
     pathUrl = @webview.src
     if pathUrl
-      url = require 'url'
-      {host, pathname, query} = url.parse(pathUrl, true)
-      if host.match(/google/)
-        q = query["q"]
+      {host, path, pathname, query, hash} = url.parse(pathUrl, true)
+      if host.match(/www\.google/)
+        q = query["q"] || hash?.match(/^#q=(.*)$/)?[1]
         if q isnt undefined
           @addressBar.setText(q)
         else
