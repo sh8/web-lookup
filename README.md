@@ -17,7 +17,7 @@ apm install web-lookup
 * `ctrl-o` - Open right split web view
 * `ctrl-l` - Open full screen web view
 
-Use `ctrl + backspace(delete)` in place of `backspace(delete)` 
+Use `ctrl + backspace(delete)` in place of `backspace(delete)`
 
 ## Licence
 
