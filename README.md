@@ -14,8 +14,8 @@ apm install web-lookup
 
 ## Usage
 
-* `ctl-o` - Open right split web view
-* `ctl-l` - Open full screen web view
+* `ctrl-o` - Open right split web view
+* `ctrl-l` - Open full screen web view
 
 ## Licence
 
