@@ -2,8 +2,8 @@
   "name": "web-lookup",
   "main": "./lib/web-lookup",
   "version": "1.2.0",
-  "description": "A short description of your package",
-  "keywords": [],
+  "description": "You can do research in atom editor.",
+  "keywords": ["web", "browser"],
   "repository": "https://github.com/shun3475/web-lookup",
   "license": "MIT",
   "engines": {
