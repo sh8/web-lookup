@@ -17,6 +17,8 @@ apm install web-lookup
 * `ctrl-o` - Open right split web view
 * `ctrl-l` - Open full screen web view
 
+Use `ctrl + backspace(delete)` in place of `backspace(delete)` 
+
 ## Licence
 
 [MIT](https://github.com/shun3475/web-lookup/blob/master/LICENSE.md)
